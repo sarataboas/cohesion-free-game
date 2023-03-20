@@ -1,12 +1,6 @@
+board = [[0,0,0,0]
+         [0,0,0,0]
+         [0,0,0,0]
+         [0,0,0,0]
+         [0,0,0,0]]
 
-
-def helloworld():
-    print("hello world")
-
-def main():
-
-
-    print()
-
-
-main()
