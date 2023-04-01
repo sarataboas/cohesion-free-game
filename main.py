@@ -2,15 +2,15 @@ import pygame
 
 pygame.init()
 
-LARGURA_JANELA = 400
-ALTURA_JANELA = 400
-TAMANHO_CELULA = 100
-LARGURA_TABULEIRO = TAMANHO_CELULA * 4
-ALTURA_TABULEIRO = TAMANHO_CELULA * 4
+largura_janela = 400
+altura_janela = 400
+tamanho_celula = 100
+largura_tabuleiro = tamanho_celula * 4
+altura_tabuleiro = tamanho_celula * 4
 
-BRANCO = (255, 255, 255)
+branco = (255, 255, 255)
 
-janela = pygame.display.set_mode((LARGURA_JANELA, ALTURA_JANELA))
+janela = pygame.display.set_mode((largura_janela, altura_janela))
 pygame.display.set_caption("Cohesion Free Game")
 
 
@@ -20,12 +20,13 @@ while True:
             pygame.quit()
             exit()
 
-    janela.fill(BRANCO)
+    janela.fill(branco)
 
     for linha in range(4):
         for coluna in range(4):
-            cor = BRANCO
+            cor = branco
 
-            pygame.draw.rect(janela, cor, (coluna * TAMANHO_CELULA, linha * TAMANHO_CELULA, TAMANHO_CELULA, TAMANHO_CELULA))
+            pygame.draw.rect(janela, cor, (coluna * tamanho_celula, linha * tamanho_celula, tamanho_celula, tamanho_celula))
 
     pygame.display.update()
+
