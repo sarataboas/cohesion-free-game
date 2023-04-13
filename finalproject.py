@@ -269,7 +269,7 @@ def main():
             for state,move in path:
                 print(move, ":", state)
 
-    if state == 2:
+    elif state == 2:
         font = pygame.font.SysFont(None, 30)
         b_text = font.render("Benedita Gonçalves", True, WHITE)
         b_rect = b_text.get_rect(center=(200, 180))
@@ -279,16 +279,16 @@ def main():
         screen.blit(b_text, b_rect)
         screen.blit(s_text, s_rect)
         pygame.display.flip()
-    while True:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                sys.exit()
-            elif event.type == pygame.MOUSEBUTTONDOWN:
-                # The player clicked on the moves window
-                return
-        pygame.display.flip()
-        clock.tick(60)
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
+                elif event.type == pygame.MOUSEBUTTONDOWN:
+                    # The player clicked on the moves window
+                    return
+            pygame.display.flip()
+            clock.tick(60)
 
     game(board)
     pygame.quit()
